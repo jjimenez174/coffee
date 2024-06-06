@@ -1,0 +1,33 @@
+.explore-shop {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 15px;
+}
+.explore-shop h1 {
+    color: saddlebrown;
+    font-weight: 500;
+}
+.explore-shop-text {
+    max-width: 60%;
+    columns: black; 
+}
+.explore-shop-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    margin: 20px 0px;
+    overflow-x: scroll;
+}
+.explore-shop-list::-webkit-scrollbar{
+    display: none;
+}
+.explore-shop-list-item img {
+    width: 7.5vw;
+    min-width: 80px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 0.2s;
+}
