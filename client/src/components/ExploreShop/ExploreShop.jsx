@@ -1,22 +1,22 @@
 import React from 'react'
 import './ExploreShop.css'
-import { shop_list } from '../../assets/assets'
+import { menu_list } from '../../assets/assets'
 
-const ExploreShop = () => {
+const ExploreShop = ({category, setCategory}) => {
   return (
-    <div className ='explore-shop' id='explore-shop'>
-      <h1>Explore the Coffees</h1>
-      <p className='explore-shop-text'>text here</p>
-      <div className="explore-shop-list">
-        {shop_list.map((item, index)=>{
+    <div className ='explore-menu' id='explore-menu'>
+      <h1>Shop</h1>
+      <div className="explore-menu-list">
+        {menu_list.map((item, index)=>{
             return (
-                <div key={index} className='explore-shop-list-item'>
-                    <img src={item.shop_image} alt="" />
-                    <p>{item.shop_name}</p>
+                <div onClick={()=>setCategory(prev=>prev===item.menu_name?"All":item.menu_name)} key={index} className='explore-menu-list-item'>
+                    <img className={category===item.menu.name?"active":""} src={item.menu_image} alt="" />
+                    <p>{item.menu_name}</p>
                 </div>
             )
         })}
       </div>
+      <hr />
     </div>
   )
 }

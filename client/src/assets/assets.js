@@ -1,5 +1,8 @@
-import cafe from './cafe.jpeg'
+import cafesitologowords from './cafesitologowords.png'
 import basket_icon from './basket_icon.png'
+import add_icon from './add_icon.png'
+import green_icon from './green_icon.png'
+import red_icon from './red_icon.png'
 import brazil from './Brazil.webp'
 import coffee_grinder from './coffee_grinder.jpeg'
 import colombia from './colombia.webp'
@@ -10,51 +13,107 @@ import filtered_coffee from './filtered_coffee.webp'
 import guatemala from './guatemala.webp'
 import india from './India.webp'
 import sumatra from './sumatra.webp'
+import coffee_accessories from './coffee_accessories.webp'
+import coffee_packaging from './coffee_packaging.webp'
+
 
 export const assests = {
-    cafe,
+    cafesitologowords,
     basket_icon,
+    add_icon,
+    green_icon,
+    red_icon
 }
+export const menu_list = [
+{
+    menu_name: "Coffee",
+    menu_image: coffee_packaging
+},
+{
+    menu_name: "Accs",
+    menu_image: coffee_accessories
+}
+]
 
 export const shop_list = [
   {
-    shop_name: "Brazil Coffee",
-    shop_image: brazil
+    _id: "1",
+    name: "Brazil Coffee",
+    image: brazil,
+    price: 30,
+    description:"",
+    category: "Coffee"
 },
 {
-    shop_name: "Colombia Coffee",
-    shop_image: colombia
+    _id: "2",
+    name: "Colombia Coffee",
+    image: colombia,
+    price: 25,
+    description: "",
+    category: "Coffee"
 },
 {
-    shop_name: "Costa Rica Coffee",
-    shop_image: costarica
+    _id: "3",
+    name: "Costa Rica Coffee",
+    image: costarica,
+    price: 25,
+    description: "",
+    category: "Coffee"
 },
 {
-    shop_name: "Guatemala Coffee",
-    shop_image: guatemala
+    _id: "4",
+    name: "Guatemala Coffee",
+    image: guatemala,
+    price: 25,
+    description: "",
+    category: "Coffee"
 },
 {
-    shop_name: "Ethiopia Coffee",
-    shop_image: ethiopia
+    _id: "5",
+    name: "Ethiopia Coffee",
+    image: ethiopia,
+    price: 30,
+    description: "",
+    category: "Coffee"
 },
 {
-    shop_name: "Inida Coffee",
-    shop_image: india
+    _id: "6",
+    name: "Inida Coffee",
+    image: india,
+    price: 30,
+    description: "",
+    category: "Coffee"
 },
 {
-    shop_name: "Sumatra Coffee",
-    shop_image: sumatra
+    _id: "7",
+    name: "Sumatra Coffee",
+    image: sumatra,
+    price: 30,
+    description: "",
+    category: "Coffee"
 },
 {
-    shop_name: "Coffee Grinder",
-    shop_image: coffee_grinder
+    _id: "8",
+    name: "Coffee Grinder",
+    image: coffee_grinder,
+    price: 80,
+    description: "",
+    category: "Accs"
 },
 {
-    shop_name: "Filtered Coffee",
-    shop_image: filtered_coffee
+    _id: "9",
+    name: "Filtered Coffee",
+    image: filtered_coffee,
+    price: 50,
+    description: "",
+    category: "Accs"
 },
 {
-    shop_name: "Electric Kettle",
-    shop_image: electric_kettle
+    _id: "10",
+    name: "Electric Kettle",
+    image: electric_kettle,
+    price: 120, 
+    description: "",
+    category: "Accs"
 }
 ]
