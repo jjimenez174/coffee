@@ -4,7 +4,9 @@ import { shop_list , menu_list } from "../assets/assets";
 export const StoreContext = createContext();
 
 const StoreContextProvider = (props) => {
-    const currency = "$";
+   const url = "http://localhost:4000"
+   const currency = "$";
+   const deliveryCharge = 5;
    const [cartItems,setCartItems] = useState({});
 
    const addToCart = async (itemId) => {
@@ -41,9 +43,8 @@ const getTotalCartAmount = () => {
     }
     return totalAmount;
 }
-    useEffect(()=>{
-        console.log(cartItems);
-    },[cartItems])
+
+  
     const contextValue = {
         menu_list, 
         shop_list,
@@ -52,7 +53,8 @@ const getTotalCartAmount = () => {
         addToCart,
         removeFromCart,
         getTotalCartAmount,
-        currency
+        currency,
+        deliveryCharge
      
     };
     return (

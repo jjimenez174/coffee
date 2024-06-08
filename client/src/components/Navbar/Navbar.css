@@ -5,11 +5,11 @@
     align-items: center;
 }
 .navbar .logo {
-    width: 350px;
-    height: 90px;
+    width: 420px;
+    height: 95px;
     margin-left: 10px;
 }
-.navbar-menu {
+.navbar-main {
     display: flex;
     list-style: none;
     gap: 20px;
@@ -43,7 +43,7 @@
         width: 140px;
     }
 
-    .navbar-menu {
+    .navbar-main {
         gap: 20px;
         font-size: 17px;
     }
@@ -66,7 +66,7 @@
         width: 120px;
     }
 
-    .navbar-menu {
+    .navbar-main {
         gap: 15px;
         font-size: 16px;
     }
@@ -86,7 +86,7 @@
 }
 
 @media (max-width:750px) {
-    .navbar-menu {
+    .navbar-main {
         display: none;
     }
 }

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './ExploreShop.css';
 import { menu_list } from '../../assets/assets'
+import { Link } from 'react-router-dom';
 // import { StoreContext } from '../../Context/StoreContext';
 
 const ExploreShop = ({ category, setCategory }) => {
@@ -15,13 +16,13 @@ const ExploreShop = ({ category, setCategory }) => {
         <div
           key={index}
           className="explore-shop-list-item"
-          onClick={() => handleCategoryClick(item.menu_name)}
+          onClick={() => handleCategoryClick(item.menu_name)} 
         >
-          <img
+          <Link to='/shop'><img
             className={category === item.menu_name ? "active" : ""}
             src={item.menu_image}
-            alt={item.menu_name}
-          />
+            alt=""
+          /></Link>
           <p>{item.menu_name}</p>
         </div>
       );

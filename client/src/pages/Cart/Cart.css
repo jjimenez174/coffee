@@ -6,19 +6,22 @@
     height: 1px;
     background-color: burlywood;
     border: none;
+    margin: 10px ;
 }
 
 .cart-items-title {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr 0.2fr;
     align-items: center;
     color: black;
-    font-size: max(1vw, 12px)
+    font-size: max(1.2vw, 12px);
+    margin-left: 95px;
 }
 
 .cart-items-item {
-    margin: 10px 0px;
+    margin: 10px 0;
     color: black;
+    margin-left: 103px;
 }
 
 .cart-items-item img {
@@ -55,6 +58,7 @@
     display: flex;
     justify-content: space-between;
     color: black;
+    font-size: 19px;
 }
 
 .cart-total hr {
@@ -69,6 +73,7 @@
     padding: 12px 0px;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 @media(max-width:750px) {

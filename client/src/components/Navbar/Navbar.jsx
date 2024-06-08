@@ -1,24 +1,26 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
+import { StoreContext } from '../../Context/StoreContext'
 
 const Navbar = () => {
 
-    const [menu,setMenu] = useState("home");
+    const [main,setMain] = useState("home");
+    const { getTotalCartAmount, token, setToken } = useContext(StoreContext)
+
   return (
     <div className='navbar'>
    <Link to="/"> <img className='logo'src={assets.cafesitologowords} alt=""/> </Link>
-    <ul className="navbar-menu">
-       <li onClick={() => setMenu ("home")} className={menu ==="home"? "active": ""}>Home</li> 
-        <li onClick={() => setMenu ("shop")} className={menu ==="shop"? "active": ""}>Shop</li>
-        <li onClick={() => setMenu ("contact-us")} className={menu ==="contact-us"? "active": ""}>Contact Us</li>
-        <li onClick={() => setMenu ("sign-in")} className={menu ==="sign-in"? "active": ""}>Sign In</li>
-        <li onClick={() => setMenu ("sign-up")} className={menu ==="sign-up"? "active": ""}>Sign Up</li>
+    <ul className="navbar-main">
+    <Link to="/" onClick={() => setMain("home")} className={`${main === "home" ? "active" : ""}`}>Home</Link>       
+    <Link to="/shop" onClick={() => setMain("shop")} className={`${main === "shop" ? "active" : ""}`}>Shop</Link>
+    <a href='#footer' onClick={() => setMain("contact")} className={`${main === "contact" ? "active" : ""}`}>Contact Us</a>
+      <Link to='/signin'>  <li onClick={() => setMain ("sign-in")} className={main ==="sign-in"? "active": ""}>Sign In</li></Link>
     </ul>
     <div className='navbar-right'>
        <Link to='/cart'> <img src={assets.basket_icon} alt="" /> </Link>
-        <div className="dot"></div>
+        <div className={getTotalCartAmount()===0?"":"dot"}></div>
     </div>
     </div>
   )
