@@ -4,6 +4,7 @@
 .shop-display h2 {
     font-size: max(2vw, 24px);
     font-weight: 600;
+    color: saddlebrown
 }
 .shop-display-list {
     display: grid;

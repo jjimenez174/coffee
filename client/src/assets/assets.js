@@ -13,11 +13,11 @@ import filtered_coffee from './filtered_coffee.webp'
 import guatemala from './guatemala.webp'
 import india from './India.webp'
 import sumatra from './sumatra.webp'
-import coffee_accessories from './coffee_accessories.webp'
+import coffee_accs from './coffee_accs.avif'
 import coffee_packaging from './coffee_packaging.webp'
 
 
-export const assests = {
+export const assets = {
     cafesitologowords,
     basket_icon,
     add_icon,
@@ -30,8 +30,8 @@ export const menu_list = [
     menu_image: coffee_packaging
 },
 {
-    menu_name: "Accs",
-    menu_image: coffee_accessories
+    menu_name: "Gadgets",
+    menu_image: coffee_accs
 }
 ]
 

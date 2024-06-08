@@ -6,9 +6,8 @@
     transition: 0.3s;
     animation: fadeIn 1;
 }
-.shop-item-image {
-    width: 100%;
-    border-radius: 15px 15px 0px 0px;
+.shop-item:hover{
+    transform: scale(1.02);
 }
 .shop-item-info {
     padding: 20px;
@@ -23,6 +22,10 @@
     font-weight: 500;
     margin: 10px 0px;
 }
+.shop-item-image {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
 .shop-item-img-container {
     position: relative;
 }
@@ -33,6 +36,9 @@
     right: 15px;
     cursor: pointer;
     border-radius: 50%;
+}
+.shop-item-img-container .add:hover{
+    border: 2px solid saddlebrown;
 }
 .shop-item-counter {
     position: absolute;
@@ -45,6 +51,6 @@
     border-radius: 50px;
     background-color: white;
 }
-.shop-item-counter {
+.shop-item-counter img {
     width: 30px;
 }

@@ -1,24 +1,47 @@
-import React from 'react'
+import { Outlet } from 'react-router-dom';
 import './App.css'
+import {
+  ApolloClient,
+  InMemoryCache,
+  ApolloProvider,
+  createHttpLink,
+} from '@apollo/client';
+import { setContext } from '@apollo/client/link/context';
 import Navbar from './components/Navbar/Navbar'
-import { Route, Routes } from 'react-router-dom'
-import Home from './pages/Home/Home'
-import Cart from './pages/Cart/Cart'
-import Shop from './pages/Shop/Shop'
+import Footer from './components/Footer/Footer'
+
+
+import StoreContextProvider  from './Context/StoreContext';
+
+const httpLink = createHttpLink({
+  uri: '/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem('id_token');
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
-
   return (
-    <div classname = 'app'>
-     <Navbar/>
-    <Routes>
-      <Route path='/' element={<Home/>} />
-      <Route path='/cart' element={<Cart/>} />
-      <Route path='/shop' element={<Shop/>} />
-
-    </Routes>
-    </div>
-  )
+    <ApolloProvider client={client}>
+      <StoreContextProvider>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </StoreContextProvider>
+    </ApolloProvider>
+  );
 }
 
-export default App
+export default App;
