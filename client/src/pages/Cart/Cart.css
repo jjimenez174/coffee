@@ -11,21 +11,21 @@
 
 .cart-items-title {
     display: grid;
-    grid-template-columns: 1fr 0.5fr 1fr 1fr 1fr 0.2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 0.5fr;
     align-items: center;
     color: black;
     font-size: max(1.2vw, 12px);
-    margin-left: 95px;
+    margin-left: 70px;
 }
 
 .cart-items-item {
     margin: 10px 0;
     color: black;
-    margin-left: 103px;
 }
 
 .cart-items-item img {
-    width: 10px;
+    width: 40%;
+    margin-left: 20%;
 }
 
 .cart-items-item div {

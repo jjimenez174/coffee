@@ -23,7 +23,7 @@ const ExploreShop = ({ category, setCategory }) => {
             src={item.menu_image}
             alt=""
           /></Link>
-          <p>{item.menu_name}</p>
+  
         </div>
       );
     });
